@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
 	from 'react-router-dom';
 import Home from './pages';
 import About from './pages/about';
 import Movies from './pages/movies';
 import Contact from './pages/contact';
+import Navbar from "./Navigation/Navbar.js";
 
 function App() {
 return (
 	<Router>
-	<Navbar />
+	<div>
+      <Navbar />
+    </div>
 	<Routes>
 		<Route exact path='/' element={<Home />} />
 		<Route path='/about' element={<About/>} />
