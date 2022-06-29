@@ -1,9 +1,12 @@
 import React from 'react';
+import Card from '../components/Navigation/Card.js';
+import Navbar from '../components/Navigation/Navbar.js';
   
 const Home = () => {
   return (
     <div>
-      <h1> !</h1>
+      <Navbar />
+      <Card />
     </div>
   );
 };

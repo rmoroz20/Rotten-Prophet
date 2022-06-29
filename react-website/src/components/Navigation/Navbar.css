@@ -7,21 +7,21 @@
 }
 
 body {
-  background: #272727;
+  background: #f6f4e6;
   font-family: "Montserrat", sans-serif;
 }
 
 .navMenu {
   position: absolute;
   top: 2%;
-  left: 11%;
+  left: 10%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding-top: 1.5%;
 }
 
 .navMenu a {
-  color: #f6f4e6;
+  color: #272727;
   text-decoration: none;
   font-size: 1.3em;
   text-transform: uppercase;
@@ -33,13 +33,13 @@ body {
 }
 
 .navMenu a:hover {
-  color: #fddb3a;
+  color: #c42a04;
 }
 
 .navMenu .dot {
   width: 6px;
   height: 6px;
-  background: #fddb3a;
+  background: #c42a04;
   border-radius: 50%;
   opacity: 0;
   -webkit-transform: translateX(30px);
