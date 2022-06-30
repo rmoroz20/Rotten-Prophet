@@ -1,9 +1,11 @@
 import React from 'react';
+import Navbar from "../components/Navigation/Navbar";
 
 const Contact = () => {
 return (
 	<div>
-	<h1>Mail us on feedback@geeksforgeeks.org</h1>
+	<Navbar />
+	<h1>Hi! I'm Rebecca Moroz, a Software Engineering major at Drexel University and the developer of this site!</h1>
 	</div>
 );
 };
