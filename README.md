@@ -1,2 +1,2 @@
 # Rotten-Prophet
-A site that recommends movies from Rotten Tomatoes with bad ratings, because sometimes bad can be good.
+A site that given a celebrity recommends a bad movie they starred in based on Rotten Tomatoes critic and audience scores.
