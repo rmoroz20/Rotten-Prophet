@@ -19,4 +19,5 @@ for title in movie_titles:
         print("This doesn't have a rating!")
 
 
+
 print(bad_movies)
