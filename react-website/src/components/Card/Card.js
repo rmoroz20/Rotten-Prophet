@@ -1,10 +1,10 @@
 import React from "react";
 import './Card.css';
 
-const Card = () => {
+const Card = ({contents = "nothing"}) => {
   return (
     <div>
-        <h1>hiii</h1>
+        <h1>{contents}</h1>
     </div>
   );
 };

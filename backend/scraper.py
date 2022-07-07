@@ -1,6 +1,8 @@
 from rotten_tomatoes_scraper.rt_scraper import CelebrityScraper
 from rotten_tomatoes_scraper.rt_scraper import MovieScraper
 
+
+#getting bad movies by known celebrity name
 celebrity_scraper = CelebrityScraper(celebrity_name='Demi Lovato')
 celebrity_scraper.extract_metadata(section='filmography')
 movie_titles = celebrity_scraper.metadata['movie_titles']

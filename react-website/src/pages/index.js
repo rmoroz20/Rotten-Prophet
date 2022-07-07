@@ -10,8 +10,8 @@ const Home = () => {
 
     <div>
       <Navbar />
-      <Card />
-      <img src={prophet} class='center'></img>
+      <Card contents='Welcome to the Rotten Prophet!'/>
+      <img src={prophet} class='center' alt=''></img>
     </div>
   );
 };
