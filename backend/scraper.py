@@ -32,7 +32,18 @@ def generate_rand_actor():
     
 #MOVIE FROM RANDOM ACTOR
 "getting timeout and Attribute errors--- look into, most likely because of too obscure actors being chosen"
-rand_actor = generate_rand_actor()
-print(rand_actor)
-movieList = movies_list_given_actor(rand_actor)
-print(movieList)
+def movie_list_from_rand_actor():
+    actorHasRatings = False
+    while actorHasRatings == False:
+        rand_actor = generate_rand_actor()
+        print(rand_actor)
+
+        try:
+            movieList = movies_list_given_actor(rand_actor)
+            actorHasRatings = True
+        except AttributeError:
+            print("error handling")
+            pass
+    return movieList
+
+print(movie_list_from_rand_actor())
