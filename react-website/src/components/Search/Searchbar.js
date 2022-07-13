@@ -11,19 +11,19 @@ function Searchbar() {
   const [prefix, setPrefix] = useState("");
   const [suggestion, setSuggestion] = useState("");
 
-//   const getWords = async() => {
-//     const url = 'https://raw.githubusercontent.com/EKaxada/webster-words/main/dict.json'
-//     const res = await fetch(url, {
-//       method: 'GET'
-//     });
-//     return await res.json();
-//   }
+  const getWordsRaw = async() => {
+    const url = 'https://raw.githubusercontent.com/rmoroz20/Rotten-Prophet/main/react-website/src/components/Search/actos.json'
+    const res = await fetch(url, {
+      method: 'GET'
+    });
+    return await res.json();
+  }
 
   var myTrie = new Trie();
 
   (async()=>{
-    // const dictionary = await getWords();
-    const words = getWords();
+    const dictionary = await getWordsRaw();
+    // const words = getWords();
     for (let i = 0; i < words.length; i++) {
         const word = words[i];
         myTrie.insert(word)
