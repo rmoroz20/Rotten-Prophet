@@ -1,15 +1,57 @@
+h1 {
+    font-size: 60px;
+    text-align: left;
+}
+
 h2 {
-    font-size: larger;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+h3 {
+    padding-top: 20px;
+    text-align: center;
 }
 
 .flex-container {
     display: flex;
+    padding-top: 4px;
 }
 
-.flex-child {
+.intro-div {
     flex: 1;
+    float: center;
+    margin-left: 5%;
+
 }  
 
-.flex-child:first-child {
-    margin-right: 20px;
-} 
+img {
+    width: 45%;
+}
+
+.img-div {
+    margin-left: 15%;
+    flex: 1;
+    float: right;
+}
+
+.arrow {
+    padding-top: 60px;
+    margin-left: 40px;
+}
+
+.arrow h3 {
+    font-size: 15px;
+    padding: 2px;
+    text-align: center;
+}
+
+.contact-info {
+    padding-top: 60px;
+    margin-left: 10px;
+}
+
+.contact-info h2 {
+    font-size: 18px;
+}
