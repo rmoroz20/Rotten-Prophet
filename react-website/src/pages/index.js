@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from '../components/Card/Card.js';
 import './index.css'
 import Navbar from '../components/Navigation/Navbar.js';
 import prophet from '../images/prophet.png'
@@ -11,9 +10,15 @@ const Home = () => {
 
     <div>
       <Navbar />
-      <Card contents='Welcome to the Rotten Prophet!'/>
+      <div class="top">
+        <h1>Welcome to</h1>
+      </div>
+
+      <div class="bottom">
+        <h1>the Rotten Prophet.</h1>
+      </div>
+      
       <img src={prophet} class='center' alt=''></img>
-      <Searchbar />
     </div>
   );
 };
