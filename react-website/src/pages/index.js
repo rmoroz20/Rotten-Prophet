@@ -19,6 +19,8 @@ const Home = () => {
       </div>
       
       <img src={prophet} class='center' alt=''></img>
+
+      <footer>Rotten Prophet | 2022</footer>
     </div>
   );
 };
