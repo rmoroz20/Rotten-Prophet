@@ -3,7 +3,6 @@ import './movies.css';
 import Navbar from '../components/Navigation/Navbar';
 import Button from '../components/Button/Button';
 
-import TextField from '@mui/material/TextField';
   
 const Movies = () => {
   return (
@@ -13,11 +12,10 @@ const Movies = () => {
 
       <div className="container">
         <div className="inner-container">
-          <Button color="orange" name="Blue" />
+          <Button name="Blue" function="random_bad_movie" />
         </div>
       </div>
 
-      {/* <TextField id="outlined-basic" label="" variant="outlined" /> */}
     </div>
     
   );

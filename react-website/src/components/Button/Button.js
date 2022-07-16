@@ -1,10 +1,10 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ({color = "blue",name = "name"}) => {
+const Button = ({functionName = "blue",name = "name"}) => {
     return(
         <div className="button-container">
-            <button className={`custom-button ${color}`}>{name}</button>
+            <button onClick={functionName}> {name}</button>
         </div>
     )
 }
