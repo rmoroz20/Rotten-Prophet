@@ -29,7 +29,10 @@ body {
 .navMenu {
   position: absolute;
   padding-top: 0%;
+  padding-bottom: 3px;
   padding-left: 14px;
+  background-color: #ffffff;
+  width: 100%;
 }
 
 .navMenu a {
@@ -42,7 +45,7 @@ body {
   margin: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  padding-top: 7px;
+  padding-top: 6px;
 }
 
 .navMenu a:hover {

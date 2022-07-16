@@ -17,6 +17,7 @@ const Navbar = () => {
       <a href="contact">Contact</a>
       <div class="dot"></div>
     </nav>
+    
     </div>
   );
 };
