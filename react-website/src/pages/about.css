@@ -1,6 +1,10 @@
-h2 {
-    font-size: 35px;
+.about-info {
+    padding: 80px;
+}
+
+.about-info h2 {
+    font-size: 30px;
     text-align: center;
-    padding: 30px;
     margin: auto;
+    padding: 10px;
 }

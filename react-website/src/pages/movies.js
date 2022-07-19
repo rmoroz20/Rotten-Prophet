@@ -16,6 +16,10 @@ const Movies = () => {
         </div>
       </div>
 
+      <div class='movie-results'>
+        <h2>bad movie is </h2>
+      </div>
+
     </div>
     
   );
