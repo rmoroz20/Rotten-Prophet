@@ -2,6 +2,8 @@ import React from 'react';
 import './movies.css';
 import Navbar from '../components/Navigation/Navbar';
 import Button from '../components/Button/Button';
+import Autocomplete from '../components/Search/Autocomplete.js';
+import { autoCompleteData } from "../components/Search/data.js";
 
   
 const Movies = () => {
@@ -9,6 +11,8 @@ const Movies = () => {
     <div>
       <Navbar />
       <h1>Find your movie here!</h1>
+
+      <Autocomplete data={autoCompleteData} />
 
       <div className="container">
         <div className="inner-container">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Searchbar.css";
 
 const AutoComplete = ({ data }) => {
     
