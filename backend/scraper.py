@@ -53,4 +53,4 @@ def random_bad_movie(movieList):
     rand_movie = random.choice(movieList)
     return rand_movie
 
-print(movie_list_from_rand_actor())
+#print(movie_list_from_rand_actor())
