@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './index.css'
 import Navbar from '../components/Navigation/Navbar.js';
 import prophet from '../images/prophet.png'
@@ -17,9 +17,7 @@ const Home = () => {
       </div>
       
       <img src={prophet} class='center' alt=''></img>
-
-      {/* <p>The current time is {currentTime}.</p> */}
-      <p>movie list is {randActorMovies}.</p>
+      
       <footer>Rotten Prophet | 2022</footer>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './movies.css';
 import Navbar from '../components/Navigation/Navbar';
 import Button from '../components/Button/Button';
@@ -36,7 +36,7 @@ const Movies = () => {
       </div>
 
       <div class='movie-results'>
-        <h2>bad movie is </h2>
+        <p>movie list is {randActorMovies}.</p>
       </div>
 
     </div>
