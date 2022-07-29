@@ -1,6 +1,7 @@
 import csv
 import random
 from urllib.error import HTTPError
+import rotten_tomatoes_scraper
 from rotten_tomatoes_scraper.rt_scraper import CelebrityScraper
 from rotten_tomatoes_scraper.rt_scraper import MovieScraper
 
@@ -53,4 +54,4 @@ def random_bad_movie(movieList):
     rand_movie = random.choice(movieList)
     return rand_movie
 
-#print(movie_list_from_rand_actor())
+print(movie_list_from_rand_actor())
