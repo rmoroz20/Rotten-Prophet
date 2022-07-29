@@ -12,7 +12,7 @@ const Movies = () => {
       <Navbar />
       <h1>Find your movie here!</h1>
 
-      <Autocomplete data={autoCompleteData} />
+      {/* <Autocomplete data={autoCompleteData} /> */}
 
       <div className="container">
         <div className="inner-container">

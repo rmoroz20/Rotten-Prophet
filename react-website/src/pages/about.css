@@ -8,3 +8,16 @@
     margin: auto;
     padding: 10px;
 }
+
+.about-card {
+    padding: 30px;
+}
+
+.about-info p {
+    text-align: center;
+    padding: 15px;
+    width: 35%;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 25px;
+}
