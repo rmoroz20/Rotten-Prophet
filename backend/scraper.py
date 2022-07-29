@@ -6,7 +6,7 @@ from rotten_tomatoes_scraper.rt_scraper import CelebrityScraper
 from rotten_tomatoes_scraper.rt_scraper import MovieScraper
 
 #BAD MOVIES GIVEN ACTOR NAME
-def movies_list_given_actor(actorName):
+def movie_list_given_actor(actorName):
     bad_movies = []
     celebrity_scraper = CelebrityScraper(celebrity_name= actorName)
     celebrity_scraper.extract_metadata(section='filmography')
@@ -27,6 +27,8 @@ def movies_list_given_actor(actorName):
         except HTTPError as err:
             if err.code == 404:
                 print("stupid fucking api locked")
+        except IndexError:
+            print("unknown index error???")
 
     return bad_movies
 
@@ -45,7 +47,7 @@ def movie_list_from_rand_actor():
     while actorHasRatings == False:
         rand_actor = generate_rand_actor()
         print(rand_actor)
-        movieList = movies_list_given_actor(rand_actor)
+        movieList = movie_list_given_actor(rand_actor)
         actorHasRatings = True
     return movieList
 
@@ -54,4 +56,4 @@ def random_bad_movie(movieList):
     rand_movie = random.choice(movieList)
     return rand_movie
 
-print(movie_list_from_rand_actor())
+""" print(movie_list_given_actor("Rafe Spall")) """

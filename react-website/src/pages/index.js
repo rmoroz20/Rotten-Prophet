@@ -6,15 +6,15 @@ import prophet from '../images/prophet.png'
 const Home = () => {
 
   const [currentTime, setCurrentTime] = useState(0);
-  const[randActorMovies, setRandActorMovies] = useState(1);
+  const[randActorMovies, setRandActorMovies] = useState("no movies");
 
   useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
+    /* fetch('/time').then(res => res.json()).then(data => {
       setCurrentTime(data.time);
-    });
+    }); */
 
     fetch('/movies/randomActor').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
+      setRandActorMovies(data.movies);
     });
   }, []);
 
@@ -32,7 +32,8 @@ const Home = () => {
       
       <img src={prophet} class='center' alt=''></img>
 
-      <p>The current time is {currentTime}.</p>
+      {/* <p>The current time is {currentTime}.</p> */}
+      <p>movie list is {randActorMovies}.</p>
       <footer>Rotten Prophet | 2022</footer>
     </div>
   );
