@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css'
 import Navbar from '../components/Navigation/Navbar.js';
 import prophet from '../images/prophet.png'
   
 const Home = () => {
+
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    fetch('/time').then(res => res.json()).then(data => {
+      setCurrentTime(data.time);
+    });
+  }, []);
+
   return (
 
     <div>
@@ -18,7 +27,7 @@ const Home = () => {
       
       <img src={prophet} class='center' alt=''></img>
 
-
+      <p>The current time is {currentTime}.</p>
       <footer>Rotten Prophet | 2022</footer>
     </div>
   );
