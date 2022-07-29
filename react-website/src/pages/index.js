@@ -4,20 +4,6 @@ import Navbar from '../components/Navigation/Navbar.js';
 import prophet from '../images/prophet.png'
   
 const Home = () => {
-
-  const [currentTime, setCurrentTime] = useState(0);
-  const[randActorMovies, setRandActorMovies] = useState("no movies");
-
-  useEffect(() => {
-    /* fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    }); */
-
-    fetch('/movies/randomActor').then(res => res.json()).then(data => {
-      setRandActorMovies(data.movies);
-    });
-  }, []);
-
   return (
 
     <div>
