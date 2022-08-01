@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Searchbar.css";
 
 const AutoComplete = ({ data }) => {
@@ -7,6 +7,13 @@ const AutoComplete = ({ data }) => {
   const [suggestionIndex, setSuggestionIndex] = useState(0);
   const [suggestionsActive, setSuggestionsActive] = useState(false);
   const [value, setValue] = useState("");
+  const[givenActorMovies, setGivenActorMovies] = useState("no movies");
+
+  useEffect(() => {
+    fetch('/movies/givenActor').then(res => res.json()).then(data => {
+      setGivenActorMovies(data.movies);
+    });
+  }, [])
 
   const handleChange = (e) => {
     const query = e.target.value.toLowerCase();
@@ -49,6 +56,7 @@ const AutoComplete = ({ data }) => {
       setValue(suggestions[suggestionIndex]);
       setSuggestionIndex(0);
       setSuggestionsActive(false);
+      
     }
   };
 

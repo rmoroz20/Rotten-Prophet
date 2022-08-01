@@ -1,9 +1,10 @@
 .active {
   background: lightgray;
+  border-radius: 3px;
 }
 
 input {
-
+  padding-top: 0.5rem;
   font-size: inherit;
   padding-left: 0.5rem;
   padding-right: 1rem;
@@ -21,11 +22,11 @@ input {
   padding-bottom: 10px; 
 }
 .suggestions {
-  padding-top: 40px;
-  max-width: 300px;
-  min-width:300px;
+  max-width: 325px;
+  min-width:325px;
   text-align: center;
   overflow-y: scroll;
+  border-radius: 3px;
   
 }
 

@@ -9,15 +9,10 @@ import { autoCompleteData } from "../components/Search/data.js";
 const Movies = () => {
 
   const[randActorMovies, setRandActorMovies] = useState("no movies");
-  const[givenActorMovies, setGivenActorMovies] = useState("no movies");
 
   useEffect(() => {
     fetch('/movies/randomActor').then(res => res.json()).then(data => {
       setRandActorMovies(data.movies);
-    });
-
-    fetch('/movies/givenActor').then(res => res.json()).then(data => {
-      setGivenActorMovies(data.movies);
     });
   }, []);
 
