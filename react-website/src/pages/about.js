@@ -13,7 +13,9 @@ const About = () => {
         <div class='about-card'>
           <p>Search using your favorite actor and get the perfect box office flop to complete your movie night with friends</p>
         </div>
-        
+        <div class='about-card'>
+          <p>Generate a random actor from our list of thousands and see what the rotten prophet has picked for you</p>
+        </div>
       </div>
       
 
