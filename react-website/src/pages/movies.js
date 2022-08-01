@@ -27,8 +27,10 @@ const Movies = () => {
       <Navbar />
       <h1>Find your movie here!</h1>
 
-      {/* <Autocomplete data={autoCompleteData} /> */}
-
+      <div class = 'searchbar-cont'>
+        <Autocomplete data={autoCompleteData} />
+      </div>
+      
       <div className="container">
         <div className="inner-container">
           <Button name="Blue" function="random_bad_movie" />

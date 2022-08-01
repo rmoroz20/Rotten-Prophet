@@ -55,5 +55,3 @@ def movie_list_from_rand_actor():
 def random_bad_movie(movieList):
     rand_movie = random.choice(movieList)
     return rand_movie
-
-""" print(movie_list_given_actor("Rafe Spall")) """
