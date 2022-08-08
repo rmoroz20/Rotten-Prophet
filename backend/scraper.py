@@ -5,6 +5,32 @@ import rotten_tomatoes_scraper
 from rotten_tomatoes_scraper.rt_scraper import CelebrityScraper
 from rotten_tomatoes_scraper.rt_scraper import MovieScraper
 
+#ALL MOVIES GIVEN ACTOR NAME
+def all_movie_list_given_actor(actorName):
+    movieDict = {}
+    celebrity_scraper = CelebrityScraper(celebrity_name= actorName)
+    celebrity_scraper.extract_metadata(section='filmography')
+    movie_titles = celebrity_scraper.metadata['movie_titles']
+
+    for title in movie_titles:
+        try: 
+            movie_scraper = MovieScraper(movie_title = title)
+            movie_scraper.extract_metadata()
+            movieDict[title] = [title, int((movie_scraper.metadata['Score_Rotten'])), ((movie_scraper.metadata['Score_Audience']))]
+            bad_movies.append(title)
+
+        except ValueError:
+            print("No rating!")
+        except AttributeError:
+            print("stupid fucking timeout error")
+        except HTTPError as err:
+            if err.code == 404:
+                print("stupid fucking api locked")
+        except IndexError:
+            print("unknown index error???")
+
+    return movieDict
+
 #BAD MOVIES GIVEN ACTOR NAME
 def movie_list_given_actor(actorName):
     bad_movies = []
