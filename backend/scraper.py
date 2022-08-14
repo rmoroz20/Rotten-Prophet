@@ -17,7 +17,7 @@ def all_movie_list_given_actor(actorName):
             movie_scraper = MovieScraper(movie_title = title)
             movie_scraper.extract_metadata()
             movieDict[title] = [title, int((movie_scraper.metadata['Score_Rotten'])), ((movie_scraper.metadata['Score_Audience']))]
-            bad_movies.append(title)
+            #bad_movies.append(title)
 
         except ValueError:
             print("No rating!")

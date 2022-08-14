@@ -1,1 +1,1 @@
-actors = ["fred astaire","lauren bacall"]
+actors = ["james hosey", "angelo massagli"]
