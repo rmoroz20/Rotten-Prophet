@@ -5,7 +5,7 @@ import rotten_tomatoes_scraper
 from rotten_tomatoes_scraper.rt_scraper import CelebrityScraper
 from rotten_tomatoes_scraper.rt_scraper import MovieScraper
 
-#ALL MOVIES GIVEN ACTOR NAME
+#ALL MOVIES AND RATINGS GIVEN ACTOR NAME
 def all_movie_list_given_actor(actorName):
     movieDict = {}
     celebrity_scraper = CelebrityScraper(celebrity_name= actorName)
@@ -16,7 +16,7 @@ def all_movie_list_given_actor(actorName):
         try: 
             movie_scraper = MovieScraper(movie_title = title)
             movie_scraper.extract_metadata()
-            movieDict[title] = [title, int((movie_scraper.metadata['Score_Rotten'])), ((movie_scraper.metadata['Score_Audience']))]
+            movieDict[title] = [title, int((movie_scraper.metadata['Score_Rotten'])), int((movie_scraper.metadata['Score_Audience']))]
             #bad_movies.append(title)
 
         except ValueError:
@@ -30,6 +30,15 @@ def all_movie_list_given_actor(actorName):
             print("unknown index error???")
 
     return movieDict
+
+#JUST ALL MOVIE TITLES GIVEN ACTOR NAME
+def just_movie_titles_given_actor(actorName):
+    celebrity_scraper = CelebrityScraper(celebrity_name= actorName)
+    celebrity_scraper.extract_metadata(section='filmography')
+    movie_titles = celebrity_scraper.metadata['movie_titles']
+    print(movie_titles)
+
+    return movie_titles
 
 #BAD MOVIES GIVEN ACTOR NAME
 def movie_list_given_actor(actorName):
