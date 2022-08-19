@@ -13,13 +13,13 @@ const Movies = () => {
 
   useEffect(() => {
     fetch('/movies/${givenActor}').then(res => res.json()).then(data => {
-      setGivenActorMovies(data.movies);
+      setGivenActorMovies(data[0]);
     });
   }, [])
 
   useEffect(() => {
     fetch('/movies/randomActor').then(res => res.json()).then(data => {
-      setRandActorMovies(data.movies);
+      setRandActorMovies(data[0]);
     });
   }, []);
 
@@ -40,7 +40,7 @@ const Movies = () => {
       </div>
 
       <div class='movie-results'>
-        <p>movie list is {randActorMovies}.</p>
+        <p>movie is {randActorMovies}.</p>
       </div>
 
     </div>
