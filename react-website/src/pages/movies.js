@@ -23,6 +23,10 @@ const Movies = () => {
     });
   }, []);
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
 
   return (
     <div>
@@ -35,12 +39,12 @@ const Movies = () => {
       
       <div className="container">
         <div className="inner-container">
-          <Button name="Blue" function="random_bad_movie" />
+          <button onClick={refreshPage}>Movie </button>
         </div>
       </div>
-
+      
       <div class='movie-results'>
-        <p>movie is {randActorMovies}.</p>
+        <p> Your movie is... {randActorMovies}.</p>
       </div>
 
     </div>
