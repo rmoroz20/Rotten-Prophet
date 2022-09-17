@@ -40,16 +40,16 @@ const Movies = () => {
         <Autocomplete data={autoCompleteData} />
       </div> */}
       
-      <div className="button-container">
-        <div className="button-inner-container">
-          <button onClick={refreshPage}>Give me a Movie! <div id="underline"></div></button>
-        </div>
-      </div>
-      
       <div class='movie-results'>
         <p> Your movie is... {randActorMovies}.</p>
         <center><p>Critic Score: {CScore}</p></center>
         <p>Audience Score: {AScore}</p>
+      </div>
+
+      <div className="button-container">
+        <div className="button-inner-container">
+          <button onClick={refreshPage}>Give me a Movie! <div id="underline"></div></button>
+        </div>
       </div>
 
     </div>
