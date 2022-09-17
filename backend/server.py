@@ -23,7 +23,6 @@ def get_movie_list_rand_actor():
     cur.execute('SELECT * FROM movieinfo WHERE score_critic<%s AND score_audience>%s ORDER BY RANDOM()', data)
     rows = cur.fetchone()
 
-    print(rows)
     return jsonify(rows) 
     
 

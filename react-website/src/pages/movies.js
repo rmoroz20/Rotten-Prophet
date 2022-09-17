@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './movies.css';
 import Navbar from '../components/Navigation/Navbar';
-import Button from '../components/Button/Button';
 import Autocomplete from '../components/Search/Autocomplete.js';
 import { autoCompleteData } from "../components/Search/data.js";
 
   
 const Movies = () => {
 
-  const[randActorMovies, setRandActorMovies] = useState("no movies");
+  const[randActorMovies, setRandActorMovies] = useState();
+  const[CScore, setCScore] = useState();
+  const[AScore, setAScore] = useState();
   const[givenActorMovies, setGivenActorMovies] = useState("no movies");
 
   useEffect(() => {
@@ -19,7 +20,9 @@ const Movies = () => {
 
   useEffect(() => {
     fetch('/movies/randomActor').then(res => res.json()).then(data => {
-      setRandActorMovies(data[0]);
+      setRandActorMovies(data[0],data[1],data[2]);
+      setCScore(data[1]);
+      setAScore(data[2]);
     });
   }, []);
 
@@ -33,18 +36,20 @@ const Movies = () => {
       <Navbar />
       <h1>Find your movie here!</h1>
 
-      <div class = 'searchbar-cont'>
+      {/* <div class = 'searchbar-cont'>
         <Autocomplete data={autoCompleteData} />
-      </div>
+      </div> */}
       
-      <div className="container">
-        <div className="inner-container">
-          <button onClick={refreshPage}>Movie </button>
+      <div className="button-container">
+        <div className="button-inner-container">
+          <button onClick={refreshPage}>Give me a Movie! <div id="underline"></div></button>
         </div>
       </div>
       
       <div class='movie-results'>
         <p> Your movie is... {randActorMovies}.</p>
+        <center><p>Critic Score: {CScore}</p></center>
+        <p>Audience Score: {AScore}</p>
       </div>
 
     </div>

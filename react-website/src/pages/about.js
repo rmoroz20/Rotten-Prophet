@@ -10,11 +10,11 @@ const About = () => {
       <div class='about-info'>
         <h2>Sometimes a movie is so bad it's almost good...</h2>
         <h2>This is a site just for that!</h2>
-        <div class='about-card'>
+        {/* <div class='about-card'>
           <p>Search using your favorite actor and get the perfect box office flop to complete your movie night with friends</p>
-        </div>
+        </div> */}
         <div class='about-card'>
-          <p>Generate a random actor from our list of thousands and see what the rotten prophet has picked for you</p>
+          <p>Generate a random actor from our list of thousands and see what the rotten prophet has picked for you!</p>
         </div>
       </div>
       

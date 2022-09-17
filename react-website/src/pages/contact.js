@@ -18,7 +18,7 @@ return (
 				</div>
 
 				<div class="contact-info">
-					<h2>Feel free to email me at <a href='mailto: rlm338@drexel.edu'>rlm338@drexel</a> with any questions or issues.</h2>
+					<h2>Feel free to contact me at rebeccamoroz02@gmail.com with any questions or issues.</h2>
 					<h3>Suggestions are always welcome!</h3>
 				</div>
 			
