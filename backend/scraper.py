@@ -22,12 +22,12 @@ def all_movie_list_given_actor(actorName):
         except ValueError:
             print("No rating!")
         except AttributeError:
-            print("stupid fucking timeout error")
+            print("timeout error")
         except HTTPError as err:
             if err.code == 404:
-                print("stupid fucking api locked")
+                print("api locked")
         except IndexError:
-            print("unknown index error???")
+            print("")
 
     return movieDict
 
@@ -58,12 +58,12 @@ def movie_list_given_actor(actorName):
         except ValueError:
             print("No rating!")
         except AttributeError:
-            print("stupid fucking timeout error")
+            print("scraper timeout")
         except HTTPError as err:
             if err.code == 404:
-                print("stupid fucking api locked")
+                print("api locked")
         except IndexError:
-            print("unknown index error???")
+            print("")
 
     return bad_movies
 
